@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply min-h-screen text-slate-700 antialiased;
+  background: linear-gradient(180deg, #f6f7f4 0%, #f0f3ef 50%, #eef1ec 100%);
+  background-attachment: fixed;
+}
+
+#root {
+  @apply min-h-screen;
+}
