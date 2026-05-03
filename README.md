@@ -1,57 +1,142 @@
-# Task Manager (React + Express + MongoDB Atlas)
+# 📝 Todo App (MERN Stack)
 
-Full-stack task manager with JWT auth: **React** (Vite + Tailwind) frontend, **Express** API, **MongoDB Atlas** for data. The dashboard supports **search and filters** (list, tag), **tags and lists**, **recurring tasks** (daily / weekly / monthly when completed), and a **calendar view**. UI is **responsive** (mobile-first, sticky form on large screens, tasks stack on small screens).
+A full-featured **Todo Management Application** built using **React, Express, and MongoDB Atlas**. This app helps users efficiently manage daily tasks with advanced features like notifications, sorting, and calendar view.
 
-**Layout:** frontend lives in **`client/`** (Vite: `client/index.html`, app in `client/src/`). The API is in **`server/`**.
+---
 
-## Prerequisites
+## 🚀 Features
 
-- [Node.js](https://nodejs.org/) 18+
-- A [MongoDB Atlas](https://www.mongodb.com/atlas) cluster and connection string
+### 🔐 Authentication
 
-## MongoDB Atlas
+* User Signup & Login
+* Secure authentication system
 
-1. Create a cluster → **Database** → **Connect** → **Drivers** → copy the connection string.
-2. Replace `<password>` with your database user password.
-3. Allow your IP (or `0.0.0.0/0` for development only) in **Network Access**.
+### 📋 Task Management
 
-Recommended database name in the URI path: `taskmanager` (e.g. `...mongodb.net/taskmanager?...`).
+* Add new tasks
+* Edit existing tasks
+* Delete tasks
+* Clear all tasks
 
-## Configuration
+### ⭐ Task Types
 
-1. **Create your env file:** copy `server/.env.example` to **`server/.env`** (same folder as `server/server.js`). Never commit `server/.env`.
-2. Set:
-   - **`MONGODB_URI`** — Atlas connection string (valid user/password).
-   - **`JWT_SECRET`** — long random string (used to sign tokens).
-   - **`PORT`** — API port (default `5000`).
-   - **`CLIENT_URL`** — allowed browser origin(s) for CORS (dev: `http://localhost:3000`, same as Vite). Comma-separate multiple origins if needed.
+* Mark tasks as Important
+* View Upcoming Tasks
+* Organize tasks efficiently
 
-Optional **client** env when **building** the app (`client/.env`):
+### 🔔 Notifications
 
-- **`VITE_API_URL`** — only if the API is on a different host than the static site (e.g. `https://api.example.com`). Omit for **same-origin** (Express serving `client/dist`).
+* Get alerts for upcoming tasks
 
-## Install
+### 📅 Calendar View
 
-```bash
-cd server && npm install
-cd ../client && npm install
+* View tasks in calendar format
+* Track deadlines visually
+
+### 🔍 Sorting & Filtering
+
+* Sort tasks by date or priority
+* Filter important / upcoming tasks
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* React.js
+* Tailwind CSS
+
+### Backend
+
+* Node.js
+* Express.js
+
+### Database
+
+* MongoDB Atlas
+
+---
+
+## 📂 Project Structure
+
+```
+root/
+│
+├── client/        # React Frontend
+├── server/        # Express Backend
+├── models/        # MongoDB Models
+├── routes/        # API Routes
+├── controllers/   # Business Logic
+└── README.md
 ```
 
-## Development
+---
 
-**Terminal 1** — API (requires `server/.env` with `MONGODB_URI` and `JWT_SECRET`):
+## ⚙️ Setup Instructions
 
-```bash
+### 1. Clone Repository
+
+```
+git clone https://github.com/your-username/todo-app.git
+cd todo-app
+```
+
+### 2. Install Dependencies
+
+#### Frontend
+
+```
+cd client
+npm install
+```
+
+#### Backend
+
+```
+cd server
+npm install
+```
+
+---
+
+## 🔐 Environment Variables
+
+Create `.env` file in **server folder**:
+
+```
+PORT=5000
+MONGO_URI=your_mongodb_atlas_url
+JWT_SECRET=your_secret_key
+```
+
+---
+
+## ▶️ Run Project
+
+### Start Backend
+
+```
 cd server
 npm run dev
 ```
 
-**Terminal 2** — React (Vite proxies `/api` to `http://localhost:5000`):
+### Start Frontend
 
-```bash
+```
 cd client
-npm run dev
+npm start
 ```
 
-Open **http://localhost:3000**. Register, sign in, then open **Dashboard** for tasks.
+---
+
+
+
+## 👩‍💻 Author
+
+**Fatima Ramzan**
+
+---
+
+✨ *Manage your tasks smartly and stay productive!*
 
