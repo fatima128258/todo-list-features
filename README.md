@@ -1,4 +1,4 @@
-# 📝 Todo App (MERN Stack)
+# 📝 Task Manager (MERN Stack)
 
 A full-featured **Todo Management Application** built using **React, Express, and MongoDB Atlas**. This app helps users efficiently manage daily tasks with advanced features like notifications, sorting, and calendar view.
 
