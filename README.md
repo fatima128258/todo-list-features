@@ -30,15 +30,6 @@ Optional **client** env when **building** the app (`client/.env`):
 
 - **`VITE_API_URL`** — only if the API is on a different host than the static site (e.g. `https://api.example.com`). Omit for **same-origin** (Express serving `client/dist`).
 
-### Welcome email (after sign up)
-
-If mail is configured in `server/.env`, a welcome email is sent after registration (see `server/utils/email.js`). Either:
-
-- **`SMTP_HOST`** (plus `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS`, `SMTP_FROM` as needed), or  
-- **`GMAIL_USER`** + **`GMAIL_APP_PASSWORD`** for Gmail.
-
-If neither is set, sign-up still works; email is skipped and a short warning may appear in the server log.
-
 ## Install
 
 ```bash
